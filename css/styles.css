@@ -1,0 +1,83 @@
+@font-face { font-family: RandyGG; src: url('fonts/RandyGGRegular.ttf'); } 
+@font-face { font-family: RandyGG; font-weight: bold; src: url('fonts/RandyGGBold.ttf');}
+
+body {
+    font-family: RandyGG;
+    height: 100%;
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    overflow: hidden;
+  }
+  .container {
+    height: 100vh;
+    width: 200vw;
+    
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .container > div {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  button {
+    padding: 0.3rem;
+  }
+  
+  h1 {
+    color: #ffffff;
+  }
+  
+  .splash {
+    background: green;
+  }
+  .splash button:nth-child(2) {
+    position: absolute;
+    right: 0;
+  }
+  .splash button:last-child {
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .about {
+    background: red;
+  }
+  .about button {
+    position: absolute;
+    top: 0;
+  }
+  
+  .blog {
+    background: yellow;
+    
+  }
+  .blog button {
+    position: absolute;
+    left: 0;
+  }
+  
+  .container {
+    transition: transform 0.3s ease 0.1s;
+  }
+  
+  .toBlog {
+    transform: translateX(-100vw);
+  }
+  
+  .toAbout {
+    transform: translateY(-100vh);
+  }
+  
+  
