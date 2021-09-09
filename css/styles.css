@@ -1,19 +1,15 @@
 @font-face { font-family: RandyGG; src: url('fonts/RandyGGRegular.ttf'); } 
 @font-face { font-family: RandyGG; font-weight: bold; src: url('fonts/RandyGGBold.ttf');}
 
-body {
-    font-family: RandyGG;
-    height: 100%;
-    margin: 0;
-}
-
 * {
     margin: 0;
+    font-family: RandyGG;
     padding: 0;
     box-sizing: border-box;
   }
   body {
-    overflow: hidden;
+    overflow-x: hidden;
+
   }
   .container {
     height: 100vh;
@@ -39,8 +35,14 @@ body {
     color: #ffffff;
   }
   
-  .splash {
-    background: green;
+  .splash {  
+    background-image: url("media/subway.jpg");
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .splash button:nth-child(2) {
     position: absolute;
@@ -52,7 +54,8 @@ body {
   }
   
   .about {
-    background: red;
+    background: #212129;
+
   }
   .about button {
     position: absolute;
@@ -60,8 +63,7 @@ body {
   }
   
   .blog {
-    background: yellow;
-    
+    background: #212129;
   }
   .blog button {
     position: absolute;
