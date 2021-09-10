@@ -2,88 +2,167 @@
 @font-face { font-family: RandyGG; font-weight: bold; src: url('fonts/RandyGGBold.ttf');}
 
 * {
-    margin: 0;
-    font-family: RandyGG;
-    padding: 0;
-    box-sizing: border-box;
-    color: #ffffff;
-  }
-  body {
-    overflow-x: hidden;
+  margin: 0;
+  font-family: RandyGG;
+  padding: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  /* background: #212129; */
 
-  }
-  .container {
-    height: 100vh;
-    width: 200vw;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .container > div {
-    height: 100vh;
-    width: 100vw;
+}
+body {
+overflow: hidden;
+}
 
-    /* This flex is causing the issue of side-by-side text */
-    display: flex; 
+button {
+  padding: 0.3rem;
+}
 
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  
-  button {
-    padding: 0.3rem;
-  }
-  
-  h1 {
-    color: #ffffff;
-  }
-  
-  .splash {  
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("media/subway.jpg");
+h1{
+color: #eeebf0;
+}
 
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-  }
-  .splash button:nth-child(2) {
-    position: absolute;
-    right: 0;
-  }
-  .splash button:last-child {
-    position: absolute;
-    bottom: 0;
-  }
+h2{
+  color: #d6d3d8;
+}
+
+li {
+  align-self: center;
+  padding-left: 5px;
+  /* padding-right: 50px; */
+  /* padding-bottom: 5px; */
+  margin: 10px;
+  list-style: none;
   
-  .about {
-    background: #212129;
-    overflow-y: visible;
   }
-  .about button {
-    position: absolute;
-    top: 0;
-  }
+
+p,
+li {
+  color: #a6a4a8;
+}
+
+ul {
+  text-align: left;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 0;
+}
+
+/*----Customs---*/
+
+.about {
+  background: #212129;
+  overflow-y: visible;
+}
+.about button {
+  position: absolute;
+  top: 0;
+}
+
+.blog {
+  color: white;
+  background-color: #212129;
+}
+
+.blog a {
+  text-decoration: none;
+  padding: 10px 10px;
+  top: 20%;
+}
+.blog button {
+  position: absolute;
+  left: 0;
+}
+
+.blog-entry{
+  height: 100vh;
+  padding: 5% 25%;
+  background-color: #212129;
+  overflow: visible;
+}
+
+.blog-entry h1{
+text-align: center;
+}
+
+.blog-entry h2{
+  padding-top: 20px;
+  font-weight: bold;
+}
+
+.blog-entry h3 {
+  font-weight:initial;
+}
+
+.blog-entry p{
+  padding-top: 20px;
   
-  .blog {
-    background: #212129;
-  }
-  .blog button {
-    position: absolute;
-    left: 0;
-  }
+}
+
+.blog-container{
+  position: relative;
+  padding: 10px;
+  /* width: auto;
+  height: auto; */
+  border: 2px solid #ffffff;
+  /* margin: 200px auto; */
+}
+
+.vl{
+  border-left: 2px solid white;
+  height: 260px;
+  position:absolute;
+  margin-left: -3px;
+  background: transparent;
+
+}
+.container {
+  height: 100vh;
+  width: 200vw;
+  display: flex;
+  flex-wrap: wrap;
+  transition: transform 0.3s ease 0.1s;
+
+}
+.container > div {
+  height: 100vh;
+  width: 100vw;
+
+  /* This flex is causing the issue of side-by-side text */
+  display: flex; 
+
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.splash {  
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("media/subway.jpg");
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   
-  .container {
-    transition: transform 0.3s ease 0.1s;
-  }
-  
-  .toBlog {
-    transform: translateX(-100vw);
-  }
-  
-  .toAbout {
-    transform: translateY(-100vh);
-  }
-  
-  
+}
+
+.splash h1{
+  color: white;
+}
+.splash button:nth-child(2) {
+  position: absolute;
+  right: 0;
+}
+.splash button:last-child {
+  position: absolute;
+  bottom: 0;
+}
+
+.toBlog {
+  transform: translateX(-100vw);
+}
+
+.toAbout {
+  transform: translateY(-100vh);
+}
