@@ -168,6 +168,10 @@ text-align: center;
 
 .blog .toHome{
   background-image: url(media/leftArrow.png); 
+}
+
+.splash .blogBtn{
+  background-image: url(media/rightarrow.png); 
 
 }
 
