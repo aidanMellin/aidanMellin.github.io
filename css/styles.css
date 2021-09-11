@@ -7,6 +7,8 @@
   padding: 0;
   box-sizing: border-box;
   color: #ffffff;
+  /* background: #212129; */
+
 }
 body {
 overflow: hidden;
@@ -14,6 +16,13 @@ overflow: hidden;
 
 button {
   padding: 0.3rem;
+  background: none;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  /* put the height and width of your image here */
+  height: 100px;
+  width: 50px;
+  border: none;
 }
 
 h1{
@@ -55,6 +64,7 @@ ul {
 .about button {
   position: absolute;
   top: 0;
+  
 }
 
 .blog {
@@ -76,7 +86,7 @@ ul {
   height: 100vh;
   padding: 5% 25%;
   background-color: #212129;
-  overflow: visible;
+  overflow-y: auto;
 }
 
 .blog-entry h1{
@@ -94,7 +104,6 @@ text-align: center;
 
 .blog-entry p{
   padding-top: 20px;
-  
 }
 
 .blog-container{
@@ -136,25 +145,34 @@ text-align: center;
 
 .splash {  
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("media/subway.jpg");
-
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
 }
 
 .splash h1{
   color: white;
 }
-.splash button:nth-child(2) {
+.splash button:nth-child(2) { /* Button to blog*/
   position: absolute;
   right: 0;
+  background-image: url(media/rightarrow.png); 
 }
-.splash button:last-child {
+.splash button:last-child { /* Button to About*/
   position: absolute;
   bottom: 0;
+  background-image: url(media/downArrow.png); 
+}
+
+.blog .toHome{
+  background-image: url(media/leftArrow.png); 
+
+}
+
+.toHome{
+  background-image: url(media/upArrow.png); 
 }
 
 .toBlog {
