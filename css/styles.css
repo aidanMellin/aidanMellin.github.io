@@ -158,7 +158,7 @@ text-align: center;
 .splash button:nth-child(2) { /* Button to blog*/
   position: absolute;
   right: 0;
-  background-image: url(media/rightarrow.png); 
+  background-image: url(media/rightArrow.png); 
 }
 .splash button:last-child { /* Button to About*/
   position: absolute;
