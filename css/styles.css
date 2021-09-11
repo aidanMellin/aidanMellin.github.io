@@ -117,7 +117,7 @@ text-align: center;
 
 .vl{
   border-left: 2px solid white;
-  height: 260px;
+  height: 275px;
   position:absolute;
   margin-left: -3px;
   background: transparent;
@@ -144,7 +144,7 @@ text-align: center;
 }
 
 .splash {  
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("media/subway.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("media/longExposure.jpg");
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -169,11 +169,6 @@ text-align: center;
 .blog .toHome{
   background-image: url(media/leftArrow.png); 
 }
-
-/* .splash .blogBtn{
-  background-image: url(media/rightarrow.png); 
-
-} */
 
 .toHome{
   background-image: url(media/upArrow.png); 
