@@ -170,10 +170,10 @@ text-align: center;
   background-image: url(media/leftArrow.png); 
 }
 
-.splash .blogBtn{
+/* .splash .blogBtn{
   background-image: url(media/rightarrow.png); 
 
-}
+} */
 
 .toHome{
   background-image: url(media/upArrow.png); 
