@@ -8,9 +8,30 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
+<script>
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+</script>
+
+<body onload="loadHome()">
     <div class="container">
-        <div class="splash">
+        <div class="project">
+            <button class="toHome"></button>
+            <h1>Github Projects =)</h1>
+            <a href="#splashHome">TO HOME</a>
+        </div>  
+
+        <div class="splash" id="splashHome">
+            <button class="projBtn"></button>
             <h1>Aidan Mellin&nbsp;</h1>
             <button class="blogBtn"></button>
             <div>
@@ -51,24 +72,27 @@
             </div>
             <button class="aboutBtn"></button>
         </div>
-
-        <div class="blog">
+        <div class="blog" id="blogPage">
             <button class="toHome"></button>
-            <h1 style="top: 1%; position: absolute;">Blog / Devlog</h1>
+            <h1 style="top: 1%; position: absolute;" >Blog / Devlog</h1>
             <a href="blog/first-blog.html">
                 <div class="blog-container">First Entry! 9/9/21</div>
             </a>
             <a href="blog/second-entry.html">
                 <div class="blog-container">Second Entry - 9/10/21</div>
             </a>
-
         </div>
+
+        <div></div>
 
         <div class="about">
             <button class="toHome"></button>
             <h1>About Me =)</h1>
         </div>
+
     </div>
+
+    
     <script src="js/script.js"></script>
 </body>
 

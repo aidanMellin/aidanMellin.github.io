@@ -61,10 +61,9 @@ ul {
   background: #212129;
   overflow-y: visible;
 }
-.about button {
+.about button:nth-child(1) {
   position: absolute;
   top: 0;
-  
 }
 
 .blog {
@@ -125,7 +124,7 @@ text-align: center;
 }
 .container {
   height: 100vh;
-  width: 200vw;
+  width: 300vw;
   display: flex;
   flex-wrap: wrap;
   transition: transform 0.3s ease 0.1s;
@@ -143,6 +142,20 @@ text-align: center;
   position: relative;
 }
 
+.project{
+  background-color: #212129;
+}
+
+.project .toHome{
+  background-image: url(media/rightArrow.png);
+  right: 0;
+  position: absolute;
+}
+
+.project h1{
+  color: white;
+}
+
 .splash {  
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("media/longExposure.jpg");
   /* Create the parallax scrolling effect */
@@ -155,10 +168,17 @@ text-align: center;
 .splash h1{
   color: white;
 }
-.splash button:nth-child(2) { /* Button to blog*/
+
+.splash button:nth-child(1){
+  position: absolute;
+  left: 0;
+  background-image: url(media/leftArrowProj.png); 
+}
+
+.splash button:nth-child(3) { /* Button to blog*/
   position: absolute;
   right: 0;
-  background-image: url(media/rightArrow.png); 
+  background-image: url(media/rightarrow.png); 
 }
 .splash button:last-child { /* Button to About*/
   position: absolute;
@@ -174,10 +194,16 @@ text-align: center;
   background-image: url(media/upArrow.png); 
 }
 
+
 .toBlog {
+  right: 0;
   transform: translateX(-100vw);
 }
 
 .toAbout {
   transform: translateY(-100vh);
+}
+
+.toProj{
+  transform: translateX(100vw);
 }
