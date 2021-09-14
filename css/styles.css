@@ -1,209 +1,231 @@
-@font-face { font-family: RandyGG; src: url('fonts/RandyGGRegular.ttf'); } 
-@font-face { font-family: RandyGG; font-weight: bold; src: url('fonts/RandyGGBold.ttf');}
+@font-face {
+    font-family: RandyGG;
+    src: url('fonts/RandyGGRegular.ttf');
+}
+@font-face {
+    font-family: RandyGG;
+    font-weight: bold;
+    src: url('fonts/RandyGGBold.ttf');
+}
 
 * {
-  margin: 0;
-  font-family: RandyGG;
-  padding: 0;
-  box-sizing: border-box;
-  color: #ffffff;
-  /* background: #212129; */
+    margin: 0;
+    font-family: RandyGG;
+    padding: 0;
+    box-sizing: border-box;
+    color: #ffffff;
+    /* background-color: #212129; */
+
+    /* background: #212129; */
 
 }
 body {
-overflow: hidden;
+    overflow: hidden;
 }
 
 button {
-  padding: 0.3rem;
-  background: none;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  /* put the height and width of your image here */
-  height: 100px;
-  width: 50px;
-  border: none;
+    padding: 0.3rem;
+    background: none;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    /* put the height and width of your image here */
+    height: 100px;
+    width: 50px;
+    border: none;
 }
 
-h1{
-color: #eeebf0;
+div {
+    /* background-color: transparent; */
 }
 
-h2{
-  color: #d6d3d8;
+h1 {
+    color: #eeebf0;
+}
+
+h2 {
+    color: #d6d3d8;
 }
 
 li {
-  align-self: center;
-  padding-left: 5px;
-  /* padding-right: 50px; */
-  /* padding-bottom: 5px; */
-  margin: 10px;
-  list-style: none;
-  
-  }
+    align-self: center;
+    padding-left: 5px;
+    /* padding-right: 50px; */
+    /* padding-bottom: 5px; */
+    margin: 10px;
+    list-style: none;
+
+}
 
 p,
 li {
-  color: #a6a4a8;
+    color: #a6a4a8;
 }
 
 ul {
-  text-align: left;
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 0;
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 0;
 }
 
 /*----Customs---*/
 
 .about {
-  background: #212129;
-  overflow-y: visible;
+    background: #212129;
+    overflow-y: visible;
 }
 .about button:nth-child(1) {
-  position: absolute;
-  top: 0;
+    position: absolute;
+    top: 0;
 }
 
 .blog {
-  color: white;
-  background-color: #212129;
+    color: white;
+    background-color: #212129;
 }
 
 .blog a {
-  text-decoration: none;
-  padding: 10px 10px;
-  top: 20%;
+    text-decoration: none;
+    padding: 10px;
+    top: 20%;
 }
 .blog button {
-  position: absolute;
-  left: 0;
+    position: absolute;
+    left: 0;
 }
 
-.blog-entry{
-  height: 100vh;
-  padding: 5% 25%;
-  background-color: #212129;
-  overflow-y: auto;
+.blog-entry {
+    height: 100vh;
+    padding: 5% 25%;
+    background-color: #212129;
+    overflow-y: auto;
 }
 
-.blog-entry h1{
-text-align: center;
+.blog-entry h1 {
+    text-align: center;
 }
 
-.blog-entry h2{
-  padding-top: 20px;
-  font-weight: bold;
+.blog-entry h2 {
+    padding-top: 20px;
+    font-weight: bold;
 }
 
 .blog-entry h3 {
-  font-weight:initial;
+    font-weight: initial;
 }
 
-.blog-entry p{
-  padding-top: 20px;
+.blog-entry p {
+    padding-top: 20px;
 }
 
-.blog-container{
-  position: relative;
-  padding: 10px;
-  /* width: auto;
+.blog-container {
+    position: relative;
+    padding: 10px;
+    /* width: auto;
   height: auto; */
-  border: 2px solid #ffffff;
-  /* margin: 200px auto; */
+    border: 2px solid #ffffff;
+    /* margin: 200px auto; */
 }
 
-.vl{
-  border-left: 2px solid white;
-  height: 275px;
-  position:absolute;
-  margin-left: -3px;
-  background: transparent;
+.goBack {
+    color: aqua;
+    border: white;
+    position: absolute;
+    bottom: 0;
+}
+
+.vl {
+    border-left: 2px solid white;
+    height: 275px;
+    position: absolute;
+    margin-left: -3px;
+    background: transparent;
 
 }
 .container {
-  height: 100vh;
-  width: 300vw;
-  display: flex;
-  flex-wrap: wrap;
-  transition: transform 0.3s ease 0.1s;
+    height: 100vh;
+    width: 300vw;
+    display: flex;
+    flex-wrap: wrap;
+    transition: transform 0.3s ease 0.1s;
 
 }
 .container > div {
-  height: 100vh;
-  width: 100vw;
+    height: 100vh;
+    width: 100vw;
 
-  /* This flex is causing the issue of side-by-side text */
-  display: flex; 
+    /* This flex is causing the issue of side-by-side text */
+    display: flex;
 
-  justify-content: center;
-  align-items: center;
-  position: relative;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-.project{
-  background-color: #212129;
+.project {
+    background-color: #212129;
 }
 
-.project .toHome{
-  background-image: url(media/rightArrow.png);
-  right: 0;
-  position: absolute;
+.project .toHome {
+    background-image: url('media/rightArrow.png');
+    right: 0;
+    position: absolute;
 }
 
-.project h1{
-  color: white;
+.project h1 {
+    color: white;
 }
 
-.splash {  
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("media/longExposure.jpg");
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.splash {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("media/longExposure.jpg");
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.splash h1{
-  color: white;
+.splash h1 {
+    color: white;
 }
 
-.splash button:nth-child(1){
-  position: absolute;
-  left: 0;
-  background-image: url(media/leftArrowProj.png); 
+.splash button:nth-child(1) {
+    position: absolute;
+    left: 0;
+    background-image: url('media/leftArrowProj.png');
 }
 
-.splash button:nth-child(3) { /* Button to blog*/
-  position: absolute;
-  right: 0;
-  background-image: url(media/rightArrow.png); 
+.splash button:nth-child(3) {
+    /* Button to blog*/
+    position: absolute;
+    right: 0;
+    background-image: url('media/rightArrow.png');
 }
-.splash button:last-child { /* Button to About*/
-  position: absolute;
-  bottom: 0;
-  background-image: url(media/downArrow.png); 
-}
-
-.blog .toHome{
-  background-image: url(media/leftArrow.png); 
+.splash button:last-child {
+    /* Button to About*/
+    position: absolute;
+    bottom: 0;
+    background-image: url('media/downArrow.png');
 }
 
-.toHome{
-  background-image: url(media/upArrow.png); 
+.blog .toHome {
+    background-image: url('media/leftArrow.png');
+}
+
+.toHome {
+    background-image: url('media/upArrow.png');
 }
 
 
 .toBlog {
-  right: 0;
-  transform: translateX(-100vw);
+    right: 0;
+    transform: translateX(-100vw);
 }
 
 .toAbout {
-  transform: translateY(-100vh);
+    transform: translateY(-100vh);
 }
 
-.toProj{
-  transform: translateX(100vw);
+.toProj {
+    transform: translateX(100vw);
 }
