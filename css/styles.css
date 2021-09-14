@@ -167,7 +167,7 @@ ul {
 }
 
 .project .toHome {
-    background-image: url('media/rightArrow.png');
+    background-image: url('media/rightHome.png');
     right: 0;
     position: absolute;
 }
@@ -192,28 +192,28 @@ ul {
 .splash button:nth-child(1) {
     position: absolute;
     left: 0;
-    background-image: url('media/leftArrowProj.png');
+    background-image: url('media/leftProj.png');
 }
 
 .splash button:nth-child(3) {
     /* Button to blog*/
     position: absolute;
     right: 0;
-    background-image: url('media/rightArrow.png');
+    background-image: url('media/rightBlog.png');
 }
 .splash button:last-child {
     /* Button to About*/
     position: absolute;
     bottom: 0;
-    background-image: url('media/downArrow.png');
+    background-image: url('media/downAbout.png');
 }
 
 .blog .toHome {
-    background-image: url('media/leftArrow.png');
+    background-image: url('media/leftHome.png');
 }
 
 .toHome {
-    background-image: url('media/upArrow.png');
+    background-image: url('media/upHome.png');
 }
 
 
