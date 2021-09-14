@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width">
     <title>Aidan Mellin</title>
     <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <base target="_blank">
 </head>
 
 <script>
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
         });
     });
-});
 
 </script>
 
@@ -27,7 +28,45 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         <div class="project">
             <button class="toHome"></button>
             <h1>Github Projects =)</h1>
-        </div>  
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Star Count</th>
+                    <th>Size of Repo</th>
+                </tr>
+                <tr>
+                    <td><a href='https://github.com/aidanMellin/aidanMellin.github.io'>aidanMellin.github.io</a></td>
+                    <td>1</td>
+                    <td>13830</td>
+                </tr>
+                <tr>
+                    <td><a href='https://github.com/aidanMellin/dailyHealthBot'>dailyHealthBot</a></td>
+                    <td>1</td>
+                    <td>10480</td>
+                </tr>
+                <tr>
+                    <td><a href='https://github.com/aidanMellin/discordBot'>discordBot</a></td>
+                    <td>1</td>
+                    <td>5438</td>
+                </tr>
+                <tr>
+                    <td><a href='https://github.com/aidanMellin/pcCalc'>pcCalc</a></td>
+                    <td>1</td>
+                    <td>206</td>
+                </tr>
+                <tr>
+                    <td><a href='https://github.com/aidanMellin/spotifyHelper'>spotifyHelper</a></td>
+                    <td>1</td>
+                    <td>7219</td>
+                </tr>
+                <tr>
+                    <td><a href='https://github.com/aidanMellin/WC-2211-01-a-OMW2PCAFYB'>WC-2211-01-a-OMW2PCAFYB</a>
+                    </td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+            </table> 
+        </div>
 
         <div class="splash" id="splashHome">
             <button class="projBtn"></button>
@@ -73,7 +112,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         </div>
         <div class="blog" id="blogPage">
             <button class="toHome"></button>
-            <h1 style="top: 1%; position: absolute;" >Blog / Devlog</h1>
+            <h1 style="top: 1%; position: absolute;">Blog / Devlog</h1>
             <a href="blog/first-blog.html">
                 <div class="blog-container">First Entry! 9/9/21</div>
             </a>
@@ -94,7 +133,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
     </div>
 
-    
+
     <script src="js/script.js"></script>
 </body>
 
