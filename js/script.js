@@ -4,19 +4,24 @@ const toAboutButton = document.querySelector('.aboutBtn');
 const toProjButton = document.querySelector('.projBtn')
 const toHomeBtns = document.querySelectorAll('.toHome');
 
+
 window.addEventListener("load", () => {
   loadHome();
-  requestProfile();
+  var repos = requestProfile();
+  console.log(repos.tabled)
 
-  // document.getElementById("ret").innerHTML=
-
+  // document.getElementById('tabledOutput').innerHTML = repos;
 });
 
 function requestProfile() {
   var request = new XMLHttpRequest();
+  var tabled;
   request.onload = getRepos;
-  request.open('get', 'https://api.github.com/users/aidanMellin/repos', true)
-  request.send()
+  request.open('get', 'https://api.github.com/users/aidanMellin/repos', true);
+  request.send();
+  tabled = request()
+  console.log(request.tabled)
+  return tabled;
 }
 
 function getRepos() {
@@ -37,10 +42,8 @@ function getRepos() {
       repoDict[repoName] = repo;
     }
   }
-
-  var tabled = tablefyRepo(repoDict);
-  console.log(tabled);
-  return tabled;
+  this.tabled = tablefyRepo(repoDict);
+  console.log(this.tabled)
 }
 
 function tablefyRepo(repoDict) {

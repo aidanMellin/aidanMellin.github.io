@@ -79,6 +79,21 @@ ul {
     top: 0;
 }
 
+.about h1{
+  position: absolute;
+  top: 15%;
+}
+
+.about table{
+  border: transparent;
+}
+
+.about .vl{
+  position: relative;
+  height: 500px;
+  position: relative;
+}
+
 .blog {
     color: white;
     background-color: #212129;
