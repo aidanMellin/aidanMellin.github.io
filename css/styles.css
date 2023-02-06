@@ -23,6 +23,13 @@ body {
     overflow: hidden;
 }
 
+img {
+    transition: .3s ease;
+}
+img:hover {
+transform: scale(1.25);
+}
+
 button {
     padding: 0.3rem;
     background: none;
@@ -32,6 +39,7 @@ button {
     height: 100px;
     width: 50px;
     border: none;
+    cursor: pointer; /*  addition */
 }
 
 div {
