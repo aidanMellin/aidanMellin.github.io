@@ -7,9 +7,7 @@ const toHomeBtns = document.querySelectorAll('.toHome');
 
 window.addEventListener("load", () => {
   loadHome();
-  var repos = requestProfile();
-  console.log(repos.tabled)
-
+  requestProfile();
   // document.getElementById('tabledOutput').innerHTML = repos;
 });
 
@@ -19,8 +17,7 @@ function requestProfile() {
   request.onload = getRepos;
   request.open('get', 'https://api.github.com/users/aidanMellin/repos', true);
   request.send();
-  tabled = request()
-  console.log(request.tabled)
+  tabled = request;
   return tabled;
 }
 
@@ -43,7 +40,7 @@ function getRepos() {
     }
   }
   this.tabled = tablefyRepo(repoDict);
-  console.log(this.tabled)
+  // console.log(this.tabled)
 }
 
 function tablefyRepo(repoDict) {
@@ -70,12 +67,14 @@ function tablefyRepo(repoDict) {
     formattedString += "</tr>";
   }
   formattedString += "</table>"
+  // $('.countriesTable tbody').html(bodyString);
+  document.getElementById("githubTable").innerHTML = formattedString;
   return formattedString;
 }
 
 function toHome() {
   container.classList.remove('toProj', 'toBlog', 'toAbout');
-  console.log("toHome")
+  // console.log("toHome")
 }
 
 function loadHome() {
