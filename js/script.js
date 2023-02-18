@@ -84,10 +84,6 @@ function tablefyRepo(repoDict) {
   return formattedString;
 }
 
-function getDevlogs(){
-
-}
-
 /**
  * Head back home
  */
