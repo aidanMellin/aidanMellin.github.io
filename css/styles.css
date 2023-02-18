@@ -42,9 +42,10 @@ button {
     cursor: pointer; /*  addition */
 }
 
-div {
-    /* background-color: transparent; */
-}
+/* div {
+    background-color: transparent;
+} 
+*/
 
 h1 {
     color: #eeebf0;
