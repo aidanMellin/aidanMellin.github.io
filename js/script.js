@@ -11,6 +11,10 @@ window.addEventListener("load", () => {
   // document.getElementById('tabledOutput').innerHTML = repos;
 });
 
+/**
+ * Use the Github API to get my repos and information.
+ * @returns 
+ */
 function requestProfile() {
   var request = new XMLHttpRequest();
   var tabled;
@@ -21,6 +25,9 @@ function requestProfile() {
   return tabled;
 }
 
+/**
+ * Take the github request and send the individuals into a table.
+ */
 function getRepos() {
   var responseObj = JSON.parse(this.responseText);
   var repoCount = responseObj.length;
@@ -43,6 +50,11 @@ function getRepos() {
   // console.log(this.tabled)
 }
 
+/**
+ * Turn returned request from github of repo information into a table string and append to Document.
+ * @param {*} repoDict 
+ * @returns 
+ */
 function tablefyRepo(repoDict) {
   table = []
   var formattedString = "<table><tr><th>Name</th><th>Star Count</th><th>Size of Repo</th></tr>";
@@ -72,6 +84,13 @@ function tablefyRepo(repoDict) {
   return formattedString;
 }
 
+function getDevlogs(){
+
+}
+
+/**
+ * Head back home
+ */
 function toHome() {
   container.classList.remove('toProj', 'toBlog', 'toAbout');
   // console.log("toHome")
