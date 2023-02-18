@@ -49,7 +49,9 @@ button {
 
 h1 {
     color: #eeebf0;
+    padding-right: 10px;
 }
+
 
 h2 {
     color: #d6d3d8;
@@ -75,6 +77,7 @@ ul {
     display: inline-block;
     vertical-align: top;
     padding-left: 0;
+    margin-top: -8px;
 }
 
 /*----Customs---*/
@@ -103,9 +106,39 @@ ul {
   position: relative;
 }
 
+button {
+    padding: 0.3rem;
+    background: none;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 100px;
+    width: 50px;
+    border: none;
+    cursor: pointer;
+    transition: .3s ease;
+}
+button:hover {
+	transform: scale(1.25);
+}
+
 .blog {
     color: white;
     background-color: #212129;
+}
+
+.blog .toHome {
+    background-image: url('media/leftHome.png');
+    margin-left: 10px;
+}
+.blog-container {
+    position: relative;
+    padding: 10px;
+    border: 2px solid #ffffff;
+    transition: .3s ease;
+}
+.blog-container:hover {
+  background: white;
+  color: #212129; 
 }
 
 .blog a {
@@ -184,6 +217,13 @@ ul {
     justify-content: center;
     align-items: center;
     position: relative;
+}
+
+.projBtn {
+    margin-left: 10px;
+}
+.blogBtn {
+    margin-right: 10px;
 }
 
 .project {
@@ -269,4 +309,35 @@ ul {
 
 .toProj {
     transform: translateX(100vw);
+}
+
+.resume-link {
+    text-align: center;
+    padding-top:10px;
+}
+.resume-link a {
+    text-decoration: none;
+}
+.underline {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+.resume-link .underline {
+    padding-bottom: 2px;
+}
+.underline::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    height: 1px;
+    width: 0;
+    left: 50%;
+    background-color: white;
+    transition: 0.3s ease;
+}
+.underline:hover::after {
+    width: 100%;
+    left: 0;
 }
