@@ -49,7 +49,6 @@ function getRepos() {
 
   // Sort based on star count then size of repo
   repoDict.sort((a,b) => parseFloat(b.stargazers_count) - parseFloat(a.stargazers_count)) || parseFloat(b.size) - parseFloat(a.size);
-  console.log(typeof(repoDict));
   this.tabled = tablefyRepo(repoDict);
 }
 

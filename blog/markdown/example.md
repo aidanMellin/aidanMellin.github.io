@@ -1,6 +1,7 @@
 ---
 title: 
 devlogDate: 
+idName: 
 ---
 
 # 
