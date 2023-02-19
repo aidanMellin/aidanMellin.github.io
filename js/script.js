@@ -68,7 +68,7 @@ function tablefyRepo(repoDict) {
     for (j = 0; j < table[i].length; j++) {
       formattedString += "<td>";
       if (j == 0) {
-        formattedString += "<a href='https://github.com/aidanMellin/" + table[i][j] + "'>";
+        formattedString += "<a class=\"underline\" href='https://github.com/aidanMellin/" + table[i][j] + "'>";
         formattedString += table[i][j];
         formattedString += "</a>";
       }
