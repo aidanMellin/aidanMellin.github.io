@@ -65,7 +65,7 @@ function tablefyRepo(repoDict) {
     formattedString += `
     <tr>
       <td>
-        <a class=\"underline\" href='https://github.com/aidanMellin/"${x.name}"'> ${x.name} </a>
+        <a class=\"underline\" href='https://github.com/aidanMellin/${x.name}'> ${x.name} </a>
       </td>
       <td>
         ${x.stargazers_count}
