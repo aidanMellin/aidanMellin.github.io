@@ -35,7 +35,7 @@ function getRepos() {
   var repo;
   var repoName;
   var repoSize;
-  var repoDict = {}
+  var repoDict = []
 
   for (i = 0; i < repoCount; i++) {
     repo = responseObj[i];
@@ -43,11 +43,14 @@ function getRepos() {
     repoName = repo.name;
     repoSize = repo.size;
     if (repo.stargazers_count >= 1) {
-      repoDict[repoName] = repo;
+      repoDict.push(repo);
     }
   }
+
+  // Sort based on star count then size of repo
+  repoDict.sort((a,b) => parseFloat(b.stargazers_count) - parseFloat(a.stargazers_count)) || parseFloat(b.size) - parseFloat(a.size);
+  console.log(typeof(repoDict));
   this.tabled = tablefyRepo(repoDict);
-  // console.log(this.tabled)
 }
 
 /**
@@ -58,28 +61,21 @@ function getRepos() {
 function tablefyRepo(repoDict) {
   table = []
   var formattedString = "<table><tr><th>Name</th><th>Star Count</th><th>Size of Repo</th></tr>";
-  Object.entries(repoDict).forEach(([key, value]) => {
-    table.push([key, value.stargazers_count, value.size])
-  });
-
-  var i, j;
-  for (i = 0; i < table.length; i++) {
-    formattedString += "<tr>";
-    for (j = 0; j < table[i].length; j++) {
-      formattedString += "<td>";
-      if (j == 0) {
-        formattedString += "<a class=\"underline\" href='https://github.com/aidanMellin/" + table[i][j] + "'>";
-        formattedString += table[i][j];
-        formattedString += "</a>";
-      }
-      else
-        formattedString += table[i][j];
-      formattedString += "</td>";
-    }
-    formattedString += "</tr>";
-  }
+  repoDict.forEach(x => {
+    formattedString += `
+    <tr>
+      <td>
+        <a class=\"underline\" href='https://github.com/aidanMellin/" + x.name + "'> ${x.name} </a>
+      </td>
+      <td>
+        ${x.stargazers_count}
+      </td>
+      <td>
+        ${x.size}
+      </td>
+    </tr>
+    `});
   formattedString += "</table>"
-  // $('.countriesTable tbody').html(bodyString);
   document.getElementById("githubTable").innerHTML = formattedString;
   return formattedString;
 }
