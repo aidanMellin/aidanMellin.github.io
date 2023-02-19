@@ -60,7 +60,7 @@ function getRepos() {
  */
 function tablefyRepo(repoDict) {
   table = []
-  var formattedString = "<table><tr><th>Name</th><th>Star Count</th><th>Size of Repo</th></tr>";
+  var formattedString = "<table><tr><th>Name</th><th>Star Count</th><th>Size of Repo (KB)</th></tr>";
   repoDict.forEach(x => {
     formattedString += `
     <tr>
