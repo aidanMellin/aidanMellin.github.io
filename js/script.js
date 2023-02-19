@@ -85,7 +85,6 @@ function tablefyRepo(repoDict) {
  */
 function toHome() {
   container.classList.remove('toProj', 'toBlog', 'toAbout');
-  // console.log("toHome")
 }
 
 function loadHome() {
