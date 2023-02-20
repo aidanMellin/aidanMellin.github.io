@@ -1,0 +1,21 @@
+button {
+    padding: 0.3rem;
+    background: none;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 100px;
+    width: 50px;
+    border: none;
+    cursor: pointer;
+    transition: .3s ease;
+}
+button:hover {
+	transform: scale(1.25);
+}
+
+.projBtn {
+    margin-left: 10px;
+}
+.blogBtn {
+    margin-right: 10px;
+}

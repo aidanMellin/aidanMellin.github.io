@@ -2,6 +2,7 @@
     font-family: RandyGG;
     src: url('fonts/RandyGGRegular.ttf');
 }
+
 @font-face {
     font-family: RandyGG;
     font-weight: bold;
@@ -19,6 +20,7 @@
     /* background: #212129; */
 
 }
+
 body {
     overflow: hidden;
 }
@@ -26,8 +28,9 @@ body {
 img {
     transition: .3s ease;
 }
+
 img:hover {
-transform: scale(1.25);
+    transform: scale(1.25);
 }
 
 button {
@@ -39,7 +42,8 @@ button {
     height: 100px;
     width: 50px;
     border: none;
-    cursor: pointer; /*  addition */
+    cursor: pointer;
+    /*  addition */
 }
 
 /* div {
@@ -82,108 +86,6 @@ ul {
 
 /*----Customs---*/
 
-.about {
-    background: #212129;
-    overflow-y: visible;
-}
-.about button:nth-child(1) {
-    position: absolute;
-    top: 0;
-}
-
-.about h1{
-  position: absolute;
-  top: 15%;
-}
-
-.about table{
-  border: transparent;
-}
-
-.about .vl{
-  position: relative;
-  height: 500px;
-  position: relative;
-}
-
-button {
-    padding: 0.3rem;
-    background: none;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    height: 100px;
-    width: 50px;
-    border: none;
-    cursor: pointer;
-    transition: .3s ease;
-}
-button:hover {
-	transform: scale(1.25);
-}
-
-.blog {
-    color: white;
-    background-color: #212129;
-}
-
-.blog .toHome {
-    background-image: url('media/leftHome.png');
-    margin-left: 10px;
-}
-.blog-container {
-    position: relative;
-    padding: 10px;
-    border: 2px solid #ffffff;
-    transition: .3s ease;
-}
-.blog-container:hover {
-  background: white;
-  color: #212129; 
-}
-
-.blog a {
-    text-decoration: none;
-    padding: 10px;
-    top: 20%;
-}
-.blog button {
-    position: absolute;
-    left: 0;
-}
-
-.blog-entry {
-    height: 100vh;
-    padding: 5% 25%;
-    background-color: #212129;
-    overflow-y: auto;
-}
-
-.blog-entry h1 {
-    text-align: center;
-}
-
-.blog-entry h2 {
-    padding-top: 20px;
-    font-weight: bold;
-}
-
-.blog-entry h3 {
-    font-weight: initial;
-}
-
-.blog-entry p {
-    padding-top: 20px;
-}
-
-.blog-container {
-    position: relative;
-    padding: 10px;
-    /* width: auto;
-  height: auto; */
-    border: 2px solid #ffffff;
-    /* margin: 200px auto; */
-}
-
 .goBack {
     color: aqua;
     border: white;
@@ -199,6 +101,7 @@ button:hover {
     background: transparent;
 
 }
+
 .container {
     height: 100vh;
     width: 300vw;
@@ -207,7 +110,8 @@ button:hover {
     transition: transform 0.3s ease 0.1s;
 
 }
-.container > div {
+
+.container>div {
     height: 100vh;
     width: 100vw;
 
@@ -219,12 +123,6 @@ button:hover {
     position: relative;
 }
 
-.projBtn {
-    margin-left: 10px;
-}
-.blogBtn {
-    margin-right: 10px;
-}
 
 .project {
     background-color: #212129;
@@ -242,55 +140,19 @@ button:hover {
     position: absolute;
 }
 
-.project td{
-  padding: 10px;
-  border-style:groove;
-  text-align: center;
+.project td {
+    padding: 10px;
+    border-style: groove;
+    text-align: center;
 }
 
 .project td:nth-child(2) {
-  padding: 0px 50px;
-} 
-
-.project a{
-  text-decoration: none;
-  color: inherit;
+    padding: 0px 50px;
 }
 
-.splash {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("media/longExposure.jpg");
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.splash h1 {
-    color: white;
-}
-
-.splash button:nth-child(1) {
-    position: absolute;
-    left: 0;
-    background-image: url('media/leftProj.png');
-}
-
-.splash button:nth-child(3) {
-    /* Button to blog*/
-    position: absolute;
-    right: 0;
-    background-image: url('media/rightBlog.png');
-}
-.splash button:last-child {
-    /* Button to About*/
-    position: absolute;
-    bottom: 0;
-    background-image: url('media/downAbout.png');
-}
-
-.blog .toHome {
-    background-image: url('media/leftHome.png');
+.project a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .toHome {
@@ -313,20 +175,24 @@ button:hover {
 
 .resume-link {
     text-align: center;
-    padding-top:10px;
+    padding-top: 10px;
 }
+
 .resume-link a {
     text-decoration: none;
 }
+
 .underline {
     color: white;
     text-decoration: none;
     position: relative;
     display: inline-block;
 }
+
 .resume-link .underline {
     padding-bottom: 2px;
 }
+
 .underline::after {
     content: "";
     position: absolute;
@@ -337,6 +203,7 @@ button:hover {
     background-color: white;
     transition: 0.3s ease;
 }
+
 .underline:hover::after {
     width: 100%;
     left: 0;

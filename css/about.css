@@ -1,0 +1,23 @@
+.about {
+    background: #212129;
+    overflow-y: visible;
+}
+.about button:nth-child(1) {
+    position: absolute;
+    top: 0;
+}
+
+.about h1{
+  position: absolute;
+  top: 15%;
+}
+
+.about table{
+  border: transparent;
+}
+
+.about .vl{
+  position: relative;
+  height: 500px;
+  position: relative;
+}
