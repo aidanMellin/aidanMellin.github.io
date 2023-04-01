@@ -2,84 +2,137 @@
 <html>
 
 <head>
-	<title>Scrolling Page</title>
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			height: 200vh;
-			background-color: #f2f2f2;
-		}
-
-		section {
-			height: 100vh;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: column;
-			background-color: #fff;
-		}
-
-		button {
-			padding: 20px 40px;
-			background-color: #fff;
-			border-radius: 20px;
-			box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-			font-size: 18px;
-			font-weight: bold;
-			color: #333;
-			border: none;
-			cursor: pointer;
-			margin: 20px;
-		}
-
-		.hidden {
-			display: none;
-		}
-	</style>
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aidan Mellin</title>
+    <link href="css/about.css" rel="stylesheet" type="text/css" />
+    <link href="css/blog.css" rel="stylesheet" type="text/css" />
+    <link href="css/buttons.css" rel="stylesheet" type="text/css" />
+    <link href="css/splash.css" rel="stylesheet" type="text/css" />
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <base target="_blank">
 </head>
 
-<body>
-	<section id="screen1">
-		<h1>Screen 1</h1>
-		<p>Content goes here.</p>
-		<button onclick="showSection('screen2')">Go to Screen 2</button>
-		<button onclick="showSection('screen3')">Go to Screen 3</button>
-	</section>
+<script>
 
-	<section id="screen2">
-		<h1>Screen 2</h1>
-		<p>Content goes here.</p>
-		<button onclick="showSection('screen1')">Go to Screen 1</button>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
 
-	</section>
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 
-	<section id="screen3" class="hidden">
-		<h1>Screen 3</h1>
-		<p>Content goes here.</p>
-		<button onclick="showSection('screen1')">Go to Screen 1</button>
-	</section>
+</script>
 
-	<script>
-		function showSection(id) {
-			const sections = document.querySelectorAll('section');
-			var scrollTimeout;
-			const section = document.getElementById(id);
-			section.scrollIntoView({ behavior: "smooth" });
-			addEventListener('scroll', function (e) {
-				clearTimeout(scrollTimeout);
-				scrollTimeout = setTimeout(function () {
-					sections.forEach(i => {
-						if (i.id !== 'screen1' && i.id !== id && !i.classList.contains('hidden')) {
-							i.classList.add('hidden');
-							console.log("hiding "+ i);
-						}
-					});
-				}, 10);
-			});
-			section.classList.remove('hidden')
-		}
-	</script>
+<body onload="loadHome()">
+    <div class="container">
+        <div class="project">
+            <button class="toHome"></button>
+            <h1>Github Projects =)</h1>
+            <div id="githubTable">
+            </div>
+        </div>
+
+        <div class="splash" id="splashHome">
+            <button class="projBtn"></button>
+            <h1>Aidan Mellin&nbsp;</h1>
+            <button class="blogBtn"></button>
+            <div>
+                <div class="vl"></div>
+                <!-- <h2 style="text-align: center;">&nbsp;Links</h2> -->
+                <ul style="padding-top: 15%">
+                    <li>
+                        <a href="https://www.linkedin.com/in/aidanmellin/" target="_blank">
+                            <img height="30" width="30" src="css/media/linkedinIco.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/aidan.mellin" target="_blank">
+                            <img height="30" width="30" src="css/media/instagramIco.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.github.com/aidanMellin" target="_blank">
+                            <img height="30" width="30" src="css/media/githubIco.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:aidan.mellin@gmail.com?" target="_blank">
+                            <img height="30" width="30" src="css/media/mailIco.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://discord.gg/3SC4tUK" target="_blank">
+                            <img height="30" width="30" src="css/media/discordIco.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitch.tv/atmfox" target="_blank">
+                            <img height="30" width="30" src="css/media/twitchIco.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <button class="aboutBtn"></button>
+        </div>
+        <div class="blog">
+            <button class="toHome"></button>
+            <h1 style="top: 1%; position: absolute;">Blog / Devlog</h1>
+            <div class="devlog-button">
+                <a href="blog/html/first.html">
+                    <div class="blog-container">First Entry! 9/9/21</div>
+                </a>
+                <a href="blog/html/second.html">
+                    <div class="blog-container">Second Entry - 9/10/21</div>
+                </a>
+                <a href="blog/html/third.html">
+                    <div class="blog-container">Third Entry - 9/13/21</div>
+                </a>
+                <a href="blog/html/fourth.html">
+                    <div class="blog-container">Fourth Entry - 10/21/21</div>
+                </a>
+                <a href="blog/html/fifth.html">
+                    <div class="blog-container">Fifth Entry - 2/17/23</div>
+                </a>
+                <a href="blog/html/wordHyphenation.html" id="starred">
+                    <div class="blog-container">Word Hy-phen-ation - 2/18/23</div>
+                </a>
+                <a href="blog/html/seventh.html" id="starred">
+                    <div class="blog-container">Seventh - 2/19/23</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- The blank div to align about correctly -->
+        <div></div>
+
+        <div class="about">
+            <button class="toHome"></button>
+            <h1>About Me =)</h1>
+            <table style="position:absolute; align-content: center;">
+                <tr>
+                    <td style="padding-right: 0px;"><img src="css/media/formal.jpg" alt="Formal Image of Me"
+                            style="max-width: 75%;"></td>
+                    <td>
+                        <div class="vl"></div>
+                    </td>
+                    <td style="padding-left: 5%; width: 500px;">
+                        <p>&nbsp;     I Began coding when I was 12 in Baltimore city after being introduced to it through extracurricular classes offered by a nonprofit organization.</p>
+                        <p>&nbsp;     I found quickly that I loved learning new languages and how to best apply them to any given situation, especially with the driving force of me wanting to figure out how to "automate my life"</p>
+                        <p>&nbsp;     I am currently attending Rochester Institute of Technology in New York pursuing a BS in Computer Science. While school is fine, I have personally found that I do best when introduced to an environment where I get to work alongside my peers towards a common goal, which is not something often found in school.</p>
+                        <p>&nbsp;     I am currently pursuing jobs in the Computer Science / Software Engineering fields with a focus on development or a job that involves direct, hands-on programming. If you would like to view my resume, that can be found below.</p>
+                        <p class="resume-link"><a class="underline" href="css/media/Aidan_Mellin_Resume.pdf">link to resume here</a></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
