@@ -19,3 +19,11 @@ button:hover {
 .blogBtn {
     margin-right: 10px;
 }
+
+.devlog-button{
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}

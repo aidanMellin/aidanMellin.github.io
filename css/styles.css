@@ -39,8 +39,8 @@ button {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     /* put the height and width of your image here */
-    height: 100px;
-    width: 50px;
+    height: 10%;
+    width: 10%;
     border: none;
     cursor: pointer;
     /*  addition */
@@ -95,9 +95,9 @@ ul {
 
 .vl {
     border-left: 2px solid white;
-    height: 275px;
+    height: 30%;
     position: absolute;
-    margin-left: -3px;
+    margin-left: 0%;
     background: transparent;
 
 }
@@ -175,7 +175,7 @@ ul {
 
 .resume-link {
     text-align: center;
-    padding-top: 10px;
+    padding-top: 1%;
 }
 
 .resume-link a {
@@ -190,14 +190,14 @@ ul {
 }
 
 .resume-link .underline {
-    padding-bottom: 2px;
+    padding-bottom: 1%;
 }
 
 .underline::after {
     content: "";
     position: absolute;
     top: 100%;
-    height: 1px;
+    height: 5%;
     width: 0;
     left: 50%;
     background-color: white;
