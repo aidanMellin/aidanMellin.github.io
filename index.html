@@ -2,84 +2,43 @@
 <html>
 
 <head>
-	<title>Scrolling Page</title>
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			height: 200vh;
-			background-color: #f2f2f2;
-		}
-
-		section {
-			height: 100vh;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: column;
-			background-color: #fff;
-		}
-
-		button {
-			padding: 20px 40px;
-			background-color: #fff;
-			border-radius: 20px;
-			box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-			font-size: 18px;
-			font-weight: bold;
-			color: #333;
-			border: none;
-			cursor: pointer;
-			margin: 20px;
-		}
-
-		.hidden {
-			display: none;
-		}
-	</style>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aidan Mellin</title>
 </head>
 
 <body>
-	<section id="screen1">
-		<h1>Screen 1</h1>
-		<p>Content goes here.</p>
-		<button onclick="showSection('screen2')">Go to Screen 2</button>
-		<button onclick="showSection('screen3')">Go to Screen 3</button>
-	</section>
+    <nav class="nav" id="nav"></nav>
+    <div id="main-content">
+        <section id="title">
+            <h1>Aidan Mellin</h1>
+            <div id="social-links">
+                <a href="https://linkedin.com/in/aidanmellin">LinkedIn</a>
+                <a href="https://github.com/aidanMellin">Github</a>
+                <a href="mailto:aidan.mellin@gmail.com">Email</a>
+            </div>
+        </section>
 
-	<section id="screen2">
-		<h1>Screen 2</h1>
-		<p>Content goes here.</p>
-		<button onclick="showSection('screen1')">Go to Screen 1</button>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi! I'm a Computer Science major at RIT with a knack for coding. Starting at 12 in Baltimore, I've always
+                loved solving problems from all angles, not just focusing on the quickest solution. Life isn't just
+                computers; I like to spend time reading, playing ultimate frisbee, and a combination of bits, bytes, and
+                *trying* to stay present in the moment.</p>
+        </section>
 
-	</section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <!-- Project details will go here -->
+            <div id="githubTable">
+        </section>
 
-	<section id="screen3" class="hidden">
-		<h1>Screen 3</h1>
-		<p>Content goes here.</p>
-		<button onclick="showSection('screen1')">Go to Screen 1</button>
-	</section>
-
-	<script>
-		function showSection(id) {
-			const sections = document.querySelectorAll('section');
-			var scrollTimeout;
-			const section = document.getElementById(id);
-			section.scrollIntoView({ behavior: "smooth" });
-			addEventListener('scroll', function (e) {
-				clearTimeout(scrollTimeout);
-				scrollTimeout = setTimeout(function () {
-					sections.forEach(i => {
-						if (i.id !== 'screen1' && i.id !== id && !i.classList.contains('hidden')) {
-							i.classList.add('hidden');
-							console.log("hiding "+ i);
-						}
-					});
-				}, 10);
-			});
-			section.classList.remove('hidden')
-		}
-	</script>
+        <section id="blog">
+            <h2>Blog</h2>
+            <!-- Blog posts will go here -->
+        </section>
+    </div>
 </body>
 
 </html>

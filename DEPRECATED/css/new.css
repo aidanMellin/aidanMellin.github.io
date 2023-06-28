@@ -1,0 +1,105 @@
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #1e1e1e, #000);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* wraps content for smaller screens */
+    width: 90%; /* avoids items sticking to the screen edge */
+    justify-content: space-around; /* distribute items evenly */
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+/* The default flex direction is row, but we can change this to column for smaller screens */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+/* Each section takes up equal space within the container, but can grow or shrink as needed */
+.project, .splash, .blog, .about {
+    flex: 1;
+    margin: 10px; /* adds some space between items */
+    color: white;
+    border-radius: 15px;
+    display: flex; /* this allows us to center the text within each section */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* adds some space inside each item */
+}
+
+/* Responsive image */
+.project img, .about img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Social links */
+.splash ul {
+    display: flex; /* aligns links in a row */
+    justify-content: space-around; /* distribute items evenly */
+    padding: 0;
+    list-style-type: none;
+}
+
+.splash ul li {
+    margin: 0 10px; /* adds some space between items */
+}
+
+.splash ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.splash ul li a img {
+    max-width: 100%;
+    height: auto;
+}
+
+.blog .devlog-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog .devlog-button .blog-container {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+.about table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.about td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.vl {
+    border-left: 2px solid white;
+    height: auto;
+    margin-left: 2%;
+    margin-right: 2%;
+}
