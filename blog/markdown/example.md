@@ -1,7 +1,0 @@
----
-title: 
-devlogDate: 
-idName: 
----
-
-# 
