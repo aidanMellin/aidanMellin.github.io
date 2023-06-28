@@ -1,210 +1,230 @@
-@font-face {
-    font-family: RandyGG;
-    src: url('fonts/RandyGGRegular.ttf');
-}
-
-@font-face {
-    font-family: RandyGG;
-    font-weight: bold;
-    src: url('fonts/RandyGGBold.ttf');
-}
-
 * {
-    margin: 0;
-    font-family: RandyGG;
-    padding: 0;
     box-sizing: border-box;
-    color: #ffffff;
-    /* background-color: #212129; */
-
-    /* background: #212129; */
-
+    scroll-behavior: smooth;
+    /* Add this line */
 }
 
 body {
-    overflow: hidden;
-}
-
-img {
-    transition: .3s ease;
-}
-
-img:hover {
-    transform: scale(1.25);
-}
-
-button {
-    padding: 0.3rem;
-    background: none;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    /* put the height and width of your image here */
-    height: 10%;
-    width: 10%;
-    border: none;
-    cursor: pointer;
-    /*  addition */
-}
-
-/* div {
-    background-color: transparent;
-} 
-*/
-
-h1 {
-    color: #eeebf0;
-    padding-right: 10px;
-}
-
-
-h2 {
-    color: #d6d3d8;
-}
-
-li {
-    align-self: center;
-    padding-left: 5px;
-    /* padding-right: 50px; */
-    /* padding-bottom: 5px; */
-    margin: 10px;
-    list-style: none;
-
-}
-
-p,
-li {
-    color: #a6a4a8;
-}
-
-ul {
-    text-align: left;
-    display: inline-block;
-    vertical-align: top;
-    padding-left: 0;
-    margin-top: -8px;
-}
-
-/*----Customs---*/
-
-.goBack {
-    color: aqua;
-    border: white;
-    position: absolute;
-    bottom: 0;
-}
-
-.vl {
-    border-left: 2px solid white;
-    height: 30%;
-    position: absolute;
-    margin-left: 0%;
-    background: transparent;
-
-}
-
-.container {
-    height: 100vh;
-    width: 300vw;
-    display: flex;
-    flex-wrap: wrap;
-    transition: transform 0.3s ease 0.1s;
-
-}
-
-.container>div {
-    height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    line-height: 1.6em;
+    margin: 0;
+    display: grid;
     width: 100vw;
+    /* Change to grid layout */
+    grid-template-columns: 100px 1fr;
+    /* Create two columns: one for nav and one for content */
+}
 
-    /* This flex is causing the issue of side-by-side text */
+#main-content {
+    grid-column: 2 / 3;
+    /* Place in second column */
+    /* padding-right: 50px; */
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+
+}
+
+#title {
     display: flex;
-
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* border-bottom: 2px solid #bbb; */
+    /* padding: 20px; */
+    text-align: center;
+    height: 100vh;
+}
+
+#title h1 {
+    margin: 0;
+    /* border-bottom: 1px solid #bbb; */
+    /* Medium Gray */
+    padding-bottom: 10px;
+}
+
+#social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#social-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    /* Dark Gray */
     position: relative;
 }
 
-
-.project {
-    background-color: #212129;
-}
-
-.project .toHome {
-    background-image: url('media/rightHome.png');
-    right: 0;
-    position: absolute;
-}
-
-.project h1 {
-    color: white;
-    top: 5%;
-    position: absolute;
-}
-
-.project td {
-    padding: 10px;
-    border-style: groove;
-    text-align: center;
-}
-
-.project td:nth-child(2) {
-    padding: 0px 50px;
-}
-
-.project a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.toHome {
-    background-image: url('media/upHome.png');
-}
-
-
-.toBlog {
-    right: 0;
-    transform: translateX(-100vw);
-}
-
-.toAbout {
-    transform: translateY(-100vh);
-}
-
-.toProj {
-    transform: translateX(100vw);
-}
-
-.resume-link {
-    text-align: center;
-    padding-top: 1%;
-}
-
-.resume-link a {
-    text-decoration: none;
-}
-
-.underline {
-    color: white;
-    text-decoration: none;
-    position: relative;
-    display: inline-block;
-}
-
-.resume-link .underline {
-    padding-bottom: 1%;
-}
-
-.underline::after {
+#social-links a::before {
     content: "";
     position: absolute;
-    top: 100%;
-    height: 5%;
     width: 0;
+    height: 1px;
+    bottom: 0;
     left: 50%;
-    background-color: white;
-    transition: 0.3s ease;
+    background-color: #0077cc;
+    /* Blue */
+    transition: all .3s ease-in-out;
 }
 
-.underline:hover::after {
+#social-links a:hover::before {
     width: 100%;
     left: 0;
+}
+
+#social-links a:hover {
+    color: #0077cc;
+    /* Blue */
+    transition: color .3s ease-in-out;
+}
+
+section {
+    padding-top: 40px;
+    height: 100vh;
+    /* scroll-snap-align: center; */
+    scroll-snap-align: center;
+    /* overflow: hidden; */
+    overflow-y: scroll;
+}
+
+section h2 {
+    border-bottom: 1px solid #bbb;
+    /* Medium Gray */
+    padding-bottom: 10px;
+}
+
+#about {
+    margin-top: 20px;
+}
+
+
+.nav {
+    position: sticky;
+    /* Sticky instead of fixed */
+    top: 0;
+    grid-column: 1 / 2;
+    /* Place in first column */
+    height: 100vh;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* overflow: auto; */
+    transition: transform .3s ease-in-out; /* Change this line */
+    will-change: transform; /* Add this line, hint to browser that this property will be animated */
+}
+
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 15px;
+    transition: all .3s ease-in-out;
+}
+
+.nav-link.active {
+    padding-left: 15px;
+    box-shadow: 5px 0 0 #0077cc inset;
+}
+
+.nav-link:hover {
+    padding-left: 15px;
+    box-shadow: 5px 0 0 #0077cc inset;
+}
+
+
+#githubTable table {
+    /* padding-top: 50%; */
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#githubTable th,
+#githubTable td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #bbb;
+}
+
+#githubTable th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#githubTable td {
+    color: #333;
+}
+
+#githubTable tr:hover td {
+    background-color: #f5f5f5;
+}
+
+#githubTable td a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+#githubTable td a {
+    position: relative;
+}
+
+#githubTable td a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #005999;
+    transition: all .3s ease-in-out;
+}
+
+#githubTable td a:hover::before {
+    width: 100%;
+    left: 0;
+    transform: translateX(0%);
+}
+
+#githubTable td a:hover {
+    color: #005999;
+    text-decoration: none;
+}
+
+
+/* Media queries for smaller screens */
+@media screen and (max-width: 600px) {
+    body {
+        grid-template-columns: 1fr;
+        /* Change to single column layout */
+    }
+
+    section h2 {
+        text-align: center;
+        /* Change from 100vh to auto */
+    }
+
+    #main-content {
+        /* add padding on left and right for all children of 20px */
+        padding: 0 20px;
+    }
+
+
+    .nav {
+        position: relative;
+        /* Change from sticky to relative */
+        height: auto;
+        /* Change from 100vh to auto */
+        display: none;
+        /* Hide navigation bar */
+    }
+
+    .nav-link {
+        font-size: 1.5em;
+        /* Increase font size */
+    }
 }

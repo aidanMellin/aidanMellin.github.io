@@ -1,0 +1,210 @@
+@font-face {
+    font-family: RandyGG;
+    src: url('fonts/RandyGGRegular.ttf');
+}
+
+@font-face {
+    font-family: RandyGG;
+    font-weight: bold;
+    src: url('fonts/RandyGGBold.ttf');
+}
+
+* {
+    margin: 0;
+    font-family: RandyGG;
+    padding: 0;
+    box-sizing: border-box;
+    color: #ffffff;
+    /* background-color: #212129; */
+
+    /* background: #212129; */
+
+}
+
+body {
+    overflow: hidden;
+}
+
+img {
+    transition: .3s ease;
+}
+
+img:hover {
+    transform: scale(1.25);
+}
+
+button {
+    padding: 0.3rem;
+    background: none;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    /* put the height and width of your image here */
+    height: 10%;
+    width: 10%;
+    border: none;
+    cursor: pointer;
+    /*  addition */
+}
+
+/* div {
+    background-color: transparent;
+} 
+*/
+
+h1 {
+    color: #eeebf0;
+    padding-right: 10px;
+}
+
+
+h2 {
+    color: #d6d3d8;
+}
+
+li {
+    align-self: center;
+    padding-left: 5px;
+    /* padding-right: 50px; */
+    /* padding-bottom: 5px; */
+    margin: 10px;
+    list-style: none;
+
+}
+
+p,
+li {
+    color: #a6a4a8;
+}
+
+ul {
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 0;
+    margin-top: -8px;
+}
+
+/*----Customs---*/
+
+.goBack {
+    color: aqua;
+    border: white;
+    position: absolute;
+    bottom: 0;
+}
+
+.vl {
+    border-left: 2px solid white;
+    height: 30%;
+    position: absolute;
+    margin-left: 0%;
+    background: transparent;
+
+}
+
+.container {
+    height: 100vh;
+    width: 300vw;
+    display: flex;
+    flex-wrap: wrap;
+    transition: transform 0.3s ease 0.1s;
+
+}
+
+.container>div {
+    height: 100vh;
+    width: 100vw;
+
+    /* This flex is causing the issue of side-by-side text */
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.project {
+    background-color: #212129;
+}
+
+.project .toHome {
+    background-image: url('media/rightHome.png');
+    right: 0;
+    position: absolute;
+}
+
+.project h1 {
+    color: white;
+    top: 5%;
+    position: absolute;
+}
+
+.project td {
+    padding: 10px;
+    border-style: groove;
+    text-align: center;
+}
+
+.project td:nth-child(2) {
+    padding: 0px 50px;
+}
+
+.project a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.toHome {
+    background-image: url('media/upHome.png');
+}
+
+
+.toBlog {
+    right: 0;
+    transform: translateX(-100vw);
+}
+
+.toAbout {
+    transform: translateY(-100vh);
+}
+
+.toProj {
+    transform: translateX(100vw);
+}
+
+.resume-link {
+    text-align: center;
+    padding-top: 1%;
+}
+
+.resume-link a {
+    text-decoration: none;
+}
+
+.underline {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+
+.resume-link .underline {
+    padding-bottom: 1%;
+}
+
+.underline::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    height: 5%;
+    width: 0;
+    left: 50%;
+    background-color: white;
+    transition: 0.3s ease;
+}
+
+.underline:hover::after {
+    width: 100%;
+    left: 0;
+}
