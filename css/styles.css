@@ -27,7 +27,7 @@ body {
 
 }
 
-#main-content h2{
+#main-content h2 {
     padding-top: 20px;
 }
 
@@ -200,6 +200,13 @@ section h2 {
     padding-bottom: 50px;
 }
 
+.image-resume-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 
 .nav {
     position: sticky;
@@ -314,6 +321,18 @@ section h2 {
         padding: 0 20px;
     }
 
+    .image-resume-container {
+        flex-direction: column-reverse;
+        padding-bottom: 20px;
+    }
+
+    #about img {
+        width: 66vw;
+        max-width: 100%;
+        height: auto;
+        margin-top: 20px;
+        /* margin-bottom: 20px; */
+    }
 
     .nav {
         position: relative;
