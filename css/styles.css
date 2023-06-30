@@ -27,6 +27,10 @@ body {
 
 }
 
+#main-content h2{
+    padding-top: 20px;
+}
+
 #title {
     display: flex;
     flex-direction: column;
@@ -95,10 +99,105 @@ section h2 {
     border-bottom: 1px solid #bbb;
     /* Medium Gray */
     padding-bottom: 10px;
+    text-align: center;
 }
 
 #about {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#about a.resume-link {
+    display: inline-block;
+    position: relative;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+#about a.resume-link::before,
+#about a.resume-link::after {
+    content: "";
+    position: absolute;
+    background-color: #000;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+#about a.resume-link::before {
+    top: 0;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+#about a.resume-link::after {
+    bottom: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+
+#about a.resume-link span::before,
+#about a.resume-link span::after {
+    content: "";
+    position: absolute;
+    background-color: #000;
+    width: 2px;
+    height: 100%;
+    top: 0;
+    transition: all 0.3s ease 0.3s;
+}
+
+#about a.resume-link span::before {
+    left: 0;
+    transform-origin: top;
+    transform: scaleY(0);
+}
+
+#about a.resume-link span::after {
+    right: 0;
+    transform-origin: bottom;
+    transform: scaleY(0);
+}
+
+#about a.resume-link:hover {
+    color: #000;
+}
+
+#about a.resume-link:hover::before {
+    transform: scaleX(1);
+}
+
+#about a.resume-link:hover::after {
+    transform: scaleX(1);
+}
+
+#about a.resume-link:hover span::before {
+    transform: scaleY(1);
+}
+
+#about a.resume-link:hover span::after {
+    transform: scaleY(1);
+}
+
+#about p {
+    flex: 1;
+    margin: 10px 15%;
+}
+
+#about img {
+    max-width: 500px;
+    height: auto;
     margin-top: 20px;
+    padding-bottom: 50px;
 }
 
 
@@ -114,8 +213,10 @@ section h2 {
     flex-direction: column;
     justify-content: center;
     /* overflow: auto; */
-    transition: transform .3s ease-in-out; /* Change this line */
-    will-change: transform; /* Add this line, hint to browser that this property will be animated */
+    transition: transform .3s ease-in-out;
+    /* Change this line */
+    will-change: transform;
+    /* Add this line, hint to browser that this property will be animated */
 }
 
 
