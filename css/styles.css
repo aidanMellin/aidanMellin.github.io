@@ -110,6 +110,8 @@ section h2 {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 #about a.resume-link {
@@ -189,13 +191,13 @@ section h2 {
     transform: scaleY(1);
 }
 
-#about p {
+.image-resume-container p {
     flex: 1;
-    margin: 10px 15%;
+    margin: 10px 20px;
 }
 
-#about img {
-    max-width: 500px;
+.image-resume-container img {
+    width: 400px;
     height: auto;
     margin-top: 20px;
     padding-bottom: 50px;
@@ -206,6 +208,7 @@ section h2 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 66vw;
 }
 
 
@@ -319,7 +322,7 @@ section h2 {
 
     #main-content {
         /* add padding on left and right for all children of 20px */
-        padding: 0 20px;
+        padding: 0 10px;
     }
 
     .image-resume-container {
