@@ -15,6 +15,7 @@ body {
     /* Change to grid layout */
     grid-template-columns: 100px 1fr;
     /* Create two columns: one for nav and one for content */
+    overflow-x: hidden;
 }
 
 #main-content {
