@@ -191,7 +191,7 @@ section h2 {
     transform: scaleY(1);
 }
 
-.image-resume-container p {
+#about p {
     flex: 1;
     margin: 10px 20px;
 }
@@ -208,7 +208,7 @@ section h2 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 66vw;
+    max-width: 100%;
 }
 
 
