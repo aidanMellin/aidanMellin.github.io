@@ -106,7 +106,7 @@ section h2 {
 #about {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     align-items: center;
     flex-wrap: wrap;
     max-width: 80%;  /* Reduced from 100vw for more margin */
@@ -196,7 +196,7 @@ section h2 {
 }
 
 #about p {
-    flex: 1;
+    /* flex: 1; */
     margin: 20px 40px;  /* Increased margin to bring in the text */
     text-align: justify;  /* Justified text */
 }
@@ -217,7 +217,32 @@ section h2 {
     padding-bottom: 50px;
 }
 
+#about a.resume-link {
+    padding: 10px 20px;
+}
 
+/* Media queries for smaller screens */
+@media (max-width: 600px) {
+
+    .image-resume-container{
+        margin-top: 0px;
+    }
+
+    .image-resume-container img {
+        width: 100%;  /* Adjust this percentage as needed */
+        max-width: 300px;  /* Set to prevent the image from becoming too large on small screens */
+        height: auto;
+        padding-bottom: 0px;
+    }
+
+    #about a.resume-link {
+        padding: 10px;  /* Reduced padding */
+    }
+
+    #about {
+        padding: 10px;  /* Reduced padding for the about section */
+    }
+}
 
 .nav {
     position: sticky;
