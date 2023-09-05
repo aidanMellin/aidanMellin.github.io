@@ -244,6 +244,13 @@ section h2 {
     }
 }
 
+/* heigh less than 950, turn off display for image-resume-container img */
+@media (max-height: 950px) {
+    .image-resume-container img {
+        display: none;
+    }
+}
+
 .nav {
     position: sticky;
     /* Sticky instead of fixed */
