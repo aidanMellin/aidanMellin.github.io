@@ -231,7 +231,7 @@ section h2 {
     .image-resume-container img {
         width: 100%;  /* Adjust this percentage as needed */
         max-width: 300px;  /* Set to prevent the image from becoming too large on small screens */
-        height: auto;
+        height: 50%;
         padding-bottom: 0px;
     }
 
