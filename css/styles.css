@@ -32,6 +32,13 @@ body {
     padding-top: 20px;
 }
 
+/* height less than 925 turn off padding-top for #main-content h2 */
+@media (max-height: 925px) {
+    #main-content h2 {
+        padding-top: 0px;
+    }
+}
+
 #title {
     display: flex;
     flex-direction: column;
