@@ -17,6 +17,21 @@ body {
     overflow-x: hidden;
 }
 
+.ico{
+    max-width: 45px;;
+
+}
+
+.ico:hover{
+    transform: scale(1.1);
+    transition: transform .3s ease-in-out;
+}
+
+.ico::after{
+    /* softly transition scale back to 1.0 over .3s */
+    transition: transform .3s ease-in-out;
+}
+
 #main-content {
     grid-column: 2 / 3;
     /* Place in second column */
