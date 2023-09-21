@@ -75,12 +75,11 @@ function getRepos() {
     var repoName;
     var repoSize;
     var repoDict = []
+    console.log(responseObj);
 
     for (i = 0; i < repoCount; i++) {
         repo = responseObj[i];
 
-        repoName = repo.name;
-        repoSize = repo.size;
         if (repo.stargazers_count >= 1) {
             repoDict.push(repo);
         }
@@ -101,18 +100,15 @@ function getRepos() {
  */
 function tablefyRepo(repoDict) {
     table = []
-    var formattedString = "<table><tr><th>Name</th><th>Star Count</th><th>Size of Repo (KB)</th></tr>";
+    var formattedString = "<table style='padding-left: 125px;'><tr><th>Name</th><th>Description</th></tr>";
     repoDict.forEach(x => {
         formattedString += `
       <tr>
         <td>
-          <a class=\"underline\" href='https://github.com/aidanMellin/${x.name}'> ${x.name} </a>
+          <a class=\"underline\" href='https://github.com/aidanMellin/${x.name}' target='_blank'> ${x.name} </a>
         </td>
         <td>
-          ${x.stargazers_count}
-        </td>
-        <td>
-          ${x.size}
+          ${x.description}
         </td>
       </tr>
       `});
