@@ -128,7 +128,7 @@ section h2 {
 #about {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-evenly; */
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     max-width: 80%;  /* Reduced from 100vw for more margin */
@@ -244,6 +244,59 @@ section h2 {
     padding: 10px 20px;
 }
 
+.icon-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;  /* Ensure items wrap onto next line */
+    margin-top: 40px;
+}
+
+/* Existing .icon-item class, now with text-align: center */
+.icon-item {
+    margin: 5px;
+    text-align: center;
+}
+
+/* Style for the text under the icons */
+.icon-item span {
+    display: block;  /* Makes it occupy the full width under the icon */
+    font-size: 16px;  /* Sets the font size */
+    font-weight: 600;  /* Makes the text slightly bold */
+}
+
+/* New class for the icon wrapper */
+.icon-wrapper {
+    transition: all 0.3s ease-in-out;  /* transition effect */
+    color: #333;  /* initial text color */
+}
+
+/* Hover effect for icon-wrapper */
+.icon-wrapper:hover {
+    transform: scale(1.2);  /* enlarge on hover */
+    color: #0077cc;  /* text color on hover */
+}
+
+/* Style for the language icons */
+.language-icon {
+    max-width: 144px;
+
+    filter: grayscale(100%) sepia(1) brightness(0.5) saturate(0);  /* make it #333 */
+}
+
+/* Hover effect for language icons */
+.icon-wrapper:hover .language-icon {
+    filter: none;  /* remove filter on hover */
+}
+
+/* Adding some vertical spacing to the About Me section only */
+#about {
+    padding-top: 60px;  /* Increased from your current setting */
+    padding-bottom: 60px;  /* New added */
+    margin-top: 40px;  /* New added */
+    margin-bottom: 40px;  /* New added */
+}
+
+
 /* Media queries for smaller screens */
 @media (max-width: 600px) {
 
@@ -264,6 +317,13 @@ section h2 {
 
     #about {
         padding: 10px;  /* Reduced padding for the about section */
+    }
+
+    .icon-grid {
+        justify-content: space-around;
+    }
+    .language-icon {
+        width: 40px;  /* smaller icon size */
     }
 }
 
