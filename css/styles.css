@@ -296,6 +296,11 @@ section h2 {
     margin-bottom: 40px;  /* New added */
 }
 
+.icon-text{
+    display: none;
+    /* make font transparent */
+    color: transparent;
+}
 
 /* Media queries for smaller screens */
 @media (max-width: 600px) {
@@ -325,6 +330,11 @@ section h2 {
     #about p {
         font-size: 14px; /* Reduced font size for paragraph */
         margin: 10px 20px; /* Reduced margins */
+    }
+
+    .icon-text{
+        display: block;
+        color: #333
     }
 
     .icon-grid {
