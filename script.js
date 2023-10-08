@@ -1,5 +1,5 @@
 window.addEventListener('load', (event) => {
-    
+
     const sections = Array.from(document.getElementsByTagName('section'));
     const nav = document.getElementById('nav');
     let navLinks = [];
@@ -88,8 +88,9 @@ function getRepos() {
     // Sort based on star count then size of repo
     repoDict.sort((a, b) => parseFloat(b.stargazers_count) - parseFloat(a.stargazers_count)) || parseFloat(b.size) - parseFloat(a.size);
 
-    //Make it only the top 10 results
-    repoDict = repoDict.slice(0, 10);
+    //iterate through repoDict and remove all repos that are not starred
+    repoDict = repoDict.filter(repo => repo.stargazers_count >= 1);
+
     this.tabled = tablefyRepo(repoDict);
 }
 
@@ -103,15 +104,15 @@ function tablefyRepo(repoDict) {
     var formattedString = "<table style='padding-left: 125px;'><tr><th>Name</th><th>Description</th></tr>";
     repoDict.forEach(x => {
         formattedString += `
-      <tr>
+        <tr>
+            <td>
+            <a class=\"underline\" href='https://github.com/aidanMellin/${x.name}' target='_blank'> ${x.name} </a>
+            </td>
         <td>
-          <a class=\"underline\" href='https://github.com/aidanMellin/${x.name}' target='_blank'> ${x.name} </a>
+            ${x.description}
         </td>
-        <td>
-          ${x.description}
-        </td>
-      </tr>
-      `});
+        </tr>
+        `});
     formattedString += "</table>"
     document.getElementById("githubTable").innerHTML = formattedString;
     return formattedString;
