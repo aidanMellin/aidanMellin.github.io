@@ -489,6 +489,12 @@ section h2 {
         font-size: 1.5em;
         /* Increase font size */
     }
+
+    /* Shrink github table, font size, and padding. Condense description to ellipses overflow */
+    #githubTable {
+        font-size: 0.8em;
+    }
+
 }
 
 /* Blog section styles */
