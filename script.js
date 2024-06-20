@@ -75,7 +75,6 @@ function getRepos() {
     var repoName;
     var repoSize;
     var repoDict = []
-    console.log(responseObj);
 
     for (i = 0; i < repoCount; i++) {
         repo = responseObj[i];
@@ -85,13 +84,35 @@ function getRepos() {
         }
     }
 
-    // Sort based on star count then size of repo
-    repoDict.sort((a, b) => parseFloat(b.stargazers_count) - parseFloat(a.stargazers_count)) || parseFloat(b.size) - parseFloat(a.size);
-
-    //iterate through repoDict and remove all repos that are not starred
     repoDict = repoDict.filter(repo => repo.stargazers_count >= 1);
+    // Sort based on star count then size of repo
+    quickSort(repoDict, 0, repoDict.length - 1);
+    console.log(repoDict);
 
     this.tabled = tablefyRepo(repoDict);
+}
+
+function partition(arr, low, hi){
+    let pivot = new Date(arr[hi].updated_at)
+    let i = low - 1;
+
+    for (let j = low; j <= hi-1; j++){
+        if (new Date(arr[j].updated_at) > pivot) {
+            i++;
+            [arr[i], arr[j]] = [arr[j], arr[i]]; // Swap elements
+        }
+    }
+
+    [arr[i + 1], arr[hi]] = [arr[hi], arr[i + 1]];
+    return i + 1;
+}
+
+function quickSort(arr, low, hi){
+    if (low < hi) {
+        let pi = partition(arr, low, hi);
+        quickSort(arr, low, pi - 1);
+        quickSort(arr, pi + 1, hi);
+    }
 }
 
 /**
