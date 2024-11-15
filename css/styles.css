@@ -317,19 +317,23 @@ section h2 {
     }
 
     #about a.resume-link {
-        padding: 10px;  /* Reduced padding */
+      padding: 6px 12px;  /* Further reduced padding */
+        font-size: 12px;    /* Further reduced font size */
+        margin-top: 10px;   /* Further reduced top margin */
     }
 
     #about {
-        padding: 0px;  /* Reduced padding for the about section */
+       padding: 10px 5px;  /* Further reduced padding */
+        margin: 10px 5px;   /* Further reduced margin */
+        max-width: 95%;     /* Ensures content does not overflow */
     }
 
     #about h2 {
         font-size: 24px; /* Reduced font size for h2 */
     }
     #about p {
-        font-size: 14px; /* Reduced font size for paragraph */
-        margin: 10px 20px; /* Reduced margins */
+       font-size: 12px;    /* Further reduced font size */
+        margin: 5px 0;      /* Further reduced margin */
     }
 
     .icon-text{
