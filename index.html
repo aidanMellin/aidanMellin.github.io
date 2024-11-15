@@ -29,10 +29,28 @@
 
         <section id="about">
             <h2>About Me</h2>
-            <p>Hey! My name is Aidan Mellin. I have recently completed my BS in Computer Science with a minor in Psychology. Given that I've been programming since age 12, I am fairly well rounded in my skill set when it comes to programming, however my skills typically revolve around algorithms and back-end solutions. This isn't to say that I don't like front end (as evidenced by this website), because I do.
-
+            <p>
+                Hey! My name is Aidan Mellin. I have recently completed my BS in Computer Science with a minor in Psychology. Given that I've been programming since age 12 -- now aged <span id="age"></span> --, I am fairly well-rounded in my skill set when it comes to programming, however my skills typically revolve around algorithms and back-end solutions. This isn't to say that I don't like front end (as evidenced by this website), because I do.
+            
                 When not in front of my screen, I am usually out in nature: hiking, biking, or reading my book in nature. I am always looking for ways to grow both professionally and personally, and I have found most success with finding the intersection of the two.
             </p>
+            
+            <script>
+                function calculateAge(birthMonth, birthYear) {
+                    const today = new Date();
+                    let age = today.getFullYear() - birthYear;
+                    const currentMonth = today.getMonth() + 1; // JavaScript months are 0-indexed
+            
+                    if (currentMonth < birthMonth) {
+                        age--;
+                    }
+            
+                    return age;
+                }
+            
+                document.getElementById("age").textContent = calculateAge(9, 2000); // September is month 9
+            </script>
+            
             <!-- Inside the #about section -->
             <div class="image-resume-container">
 
