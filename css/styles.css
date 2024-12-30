@@ -224,70 +224,6 @@ section h2 {
     text-align: justify;  /* Justified text */
 }
 
-.image-resume-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    max-width: 100%;
-    margin-top: 20px;  /* Added top margin */
-}
-
-.image-resume-container img {
-    width: 400px;
-    height: auto;
-    margin-top: 20px;
-    padding-bottom: 50px;
-}
-
-#about a.resume-link {
-    padding: 10px 20px;
-}
-
-.icon-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;  /* Ensure items wrap onto next line */
-    margin-top: 40px;
-}
-
-/* Existing .icon-item class, now with text-align: center */
-.icon-item {
-    margin: 5px;
-    text-align: center;
-}
-
-/* Style for the text under the icons */
-.icon-item span {
-    display: block;  /* Makes it occupy the full width under the icon */
-    font-size: 16px;  /* Sets the font size */
-    font-weight: 600;  /* Makes the text slightly bold */
-}
-
-/* New class for the icon wrapper */
-.icon-wrapper {
-    transition: all 0.3s ease-in-out;  /* transition effect */
-    color: #333;  /* initial text color */
-}
-
-/* Hover effect for icon-wrapper */
-.icon-wrapper:hover {
-    transform: scale(1.2);  /* enlarge on hover */
-    color: #0077cc;  /* text color on hover */
-}
-
-/* Style for the language icons */
-.language-icon {
-    max-width: 144px;
-
-    filter: grayscale(100%) sepia(1) brightness(0.5) saturate(0);  /* make it #333 */
-}
-
-/* Hover effect for language icons */
-.icon-wrapper:hover .language-icon {
-    filter: none;  /* remove filter on hover */
-}
-
 /* Adding some vertical spacing to the About Me section only */
 #about {
     padding-top: 60px;  /* Increased from your current setting */
@@ -296,25 +232,9 @@ section h2 {
     margin-bottom: 40px;  /* New added */
 }
 
-.icon-text{
-    display: none;
-    /* make font transparent */
-    color: transparent;
-}
 
 /* Media queries for smaller screens */
 @media (max-width: 600px) {
-
-    .image-resume-container{
-        margin-top: 0px;
-    }
-
-    .image-resume-container img {
-        width: 100%;  /* Adjust this percentage as needed */
-        max-width: 300px;  /* Set to prevent the image from becoming too large on small screens */
-        height: 50%;
-        padding-bottom: 0px;
-    }
 
     #about a.resume-link {
       padding: 6px 12px;  /* Further reduced padding */
@@ -334,21 +254,6 @@ section h2 {
     #about p {
        font-size: 12px;    /* Further reduced font size */
         margin: 5px 0;      /* Further reduced margin */
-    }
-
-    .icon-text{
-        display: block;
-        color: #333
-    }
-
-    .icon-grid {
-        margin-top: 5px; /* Reduced margin top */
-    }
-    .icon-item span {
-        font-size: 12px;  /* Reduced font size for the span under icons */
-    }
-    .language-icon {
-        width: 80px;  /* Reduced icon size */
     }
 }
 
@@ -475,11 +380,6 @@ section h2 {
     #main-content {
         /* add padding on left and right for all children of 20px */
         padding: 0 10px;
-    }
-
-    .image-resume-container {
-        flex-direction: column-reverse;
-        padding-bottom: 20px;
     }
 
     #about img {
