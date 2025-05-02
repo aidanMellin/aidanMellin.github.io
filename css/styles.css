@@ -243,8 +243,7 @@ a.resume-link:hover span::after {
 
 /* Media queries for smaller screens */
 @media (max-width: 600px) {
-
-    #about a.resume-link {
+    a.resume-link {
       padding: 6px 12px;  /* Further reduced padding */
         font-size: 12px;    /* Further reduced font size */
         margin-top: 10px;   /* Further reduced top margin */
@@ -263,6 +262,53 @@ a.resume-link:hover span::after {
        font-size: 12px;    /* Further reduced font size */
         margin: 5px 0;      /* Further reduced margin */
     }
+
+    .tech-stack{
+        visibility: hidden;
+    }
+
+    #about {
+        flex-wrap: nowrap;
+        align-items: stretch;
+        max-width: 100%;
+      }
+    
+      .experience-wrapper {
+        padding: 0 10px;
+        align-items: stretch;
+      }
+    
+      .experience-entry {
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 0.85em; /* shrink overall font */
+        line-height: 1.3em;
+      }
+    
+      .company {
+        font-size: 1em;
+      }
+    
+      .position {
+        font-size: 0.85em;
+      }
+    
+      .dates {
+        font-size: 0.75em;
+      }
+    
+      .responsibilities {
+        font-size: 0.8em;
+        margin-left: 16px;
+      }
+    
+      .responsibilities li {
+        margin-bottom: 3px;
+      }
+    
+      .tech-item span {
+        font-size: 0.6em;
+      }
 }
 
 /* heigh less than 950, turn off display for image-resume-container img */
@@ -537,6 +583,7 @@ a.resume-link:hover span::after {
   .company {
     margin: 0;
     font-size: 1em;
+    font-weight: bold;
   }
 
   .company-block {
@@ -595,25 +642,22 @@ a.resume-link:hover span::after {
     margin-top: 2px;
     text-align: center;
   }
+/* Default: show full name */
+.full-name {
+    display: inline;
+  }
+.short-name {
+display: none;
+}
   
-  /* Prevent overflow on smaller screens */
+  /* Mobile: show short name instead */
   @media (max-width: 600px) {
-    .experience-entry {
-      height: auto;
-      padding: 10px;
+    .full-name {
+      display: none;
     }
-  
-    .experience-header {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .dates {
-      margin-top: 5px;
-    }
-
-    .tech-stack{
-        visibility:hidden;
+    .short-name {
+      display: inline;
     }
   }
+  
   
