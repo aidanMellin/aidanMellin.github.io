@@ -35,7 +35,6 @@ body {
 #main-content {
     grid-column: 2 / 3;
     /* Place in second column */
-    /* padding-right: 50px; */
     height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
@@ -252,7 +251,7 @@ a.resume-link:hover span::after {
     #about {
        padding: 10px 5px;  /* Further reduced padding */
         margin: 10px 5px;   /* Further reduced margin */
-        max-width: 95%;     /* Ensures content does not overflow */
+        max-width: 100%;     /* Ensures content does not overflow */
     }
 
     #about h2 {
